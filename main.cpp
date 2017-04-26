@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <errno.h>
 
-#define QSPI_SPI_MODE  1
-#define QSPI_QUAD_MODE 0
+#define QSPI_SPI_MODE  0
+#define QSPI_QUAD_MODE 1
 
+/* Remember to switch memory device to SPI mode using proper command! */
 #if QSPI_SPI_MODE
 QSPIMemSpec memspec(0xFF,
                     8*1024*1024,
